@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafeteria Lunch Surge Predictor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Cafeteria Lunch Surge Predictor</h1>
+      <p>Live demand and temperature updates drive the surge forecast.</p>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="label">Latest Temperature</span>
+        <strong id="current-temp">--</strong>
+      </div>
+      <div class="stat-card">
+        <span class="label">Current Weather</span>
+        <strong id="current-weather">--</strong>
+      </div>
+      <div class="stat-card">
+        <span class="label">Predicted Lunch Demand</span>
+        <strong id="predicted-demand">--</strong>
+      </div>
+      <div class="stat-card">
+        <span class="label">Surge Risk</span>
+        <strong id="surge-label">--</strong>
+      </div>
+    </section>
+
+    <section class="chart-card">
+      <canvas id="demandChart" height="320"></canvas>
+    </section>
+  </main>
+
+  <script src="client.js"></script>
+</body>
+</html>

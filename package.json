@@ -1,0 +1,13 @@
+{
+  "name": "cafeteria-lunch-predictor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Predict lunch-hour surges using weather data and real-time chart updates.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4",
+    "socket.io": "^4.8.1"
+  }
+}
